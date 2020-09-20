@@ -1,0 +1,86 @@
+.button-container {
+    display: inline-block;
+    margin: 10px;
+    border: none;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    border: 2px solid #d2d2d1;
+    border-radius: 20px;
+    font-family: "Roboto";
+    font-size: 19px;
+    text-decoration: none;
+    outline-style: none;
+    cursor: pointer;
+}
+
+.button-text {
+    padding-top: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px 0px 10px;
+}
+
+.icon-left {
+    
+}
+
+.icon-right {
+   
+}
+
+.yellow {
+    background-color: rgba(255, 255, 0, 0.829);
+    color: black;
+}
+.yellow:hover,
+.yellow:focus {
+    background-color: rgba(255, 255, 0, 0.336);
+}
+
+.blue {
+    background-color: rgb(13, 184, 241);
+    color: honeydew;
+}
+.blue:hover,
+.blue:focus {
+    background-color: rgba(13, 184, 241, 0.527);
+}
+
+.green {
+    background-color: rgb(26, 221, 36);
+    color:honeydew;
+}
+.green:hover,
+.green:focus {
+    background-color: rgba(26, 221, 36, 0.445);
+}
+
+.red {
+    background-color: rgb(243, 11, 11);
+    color: honeydew;
+}
+.red:hover,
+.red:focus {
+    background-color: rgba(243, 11, 11, 0.521);
+}
+
+.transparent {
+    background-color: transparent;
+    color: black;
+    /*border: 2px solid transparent;*/
+    transition: all 0.6s ease-in;
+}
+.transparent:hover,
+.transparent:focus {
+    background-color: honeydew;
+}

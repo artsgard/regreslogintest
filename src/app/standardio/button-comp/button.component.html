@@ -1,0 +1,13 @@
+<div class="button-container">
+    <button [type]="inputType" [ngClass]="[buttonColor]" (click)="click()" [disabled]="isDisabled">
+        <span *ngIf="hasLeftIcon && hasIcon" class="icon-left">
+            <img class="icon" alt="left button icon" src={{buttonIcon}}>
+        </span>
+        <span class="button-text">
+            <p>{{buttonLabel}}</p>
+        </span>
+        <span *ngIf="!hasLeftIcon && hasIcon" class="icon-right">
+            <img class="icon" alt="button icon" src={{buttonIcon}}>
+        </span>
+    </button>
+</div>

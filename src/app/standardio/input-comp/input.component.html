@@ -1,0 +1,19 @@
+<div class="input-container-wrapper">
+    <div class="input-container" [ngClass]="showError ? 'val-error-border' : 'val-clean-border'">
+        <label [for]="inputId" [ngClass]="showError ? 'val-error-text' : 'val-clean-text'">
+            <div *ngIf="showLabel">{{placeholder}}</div>
+        </label>
+        <input [id]="inputId" 
+            [type]="inputType" 
+            [placeholder]="placeholder" 
+            [disabled]="isDisabled" 
+            (blur)="inputBlur()" 
+            (focus)="inputFocus()" 
+            [(ngModel)]="value" 
+            [ngClass]="{'floating-label': isFloat, 'val-error-text': showError, 'val-clean-text': !showError}"
+            (ngModelChange)="inputText($event)">
+        <div style="display:inline;" class="image-icon">
+            <img *ngIf="showTick" class="input-tick" alt="green tick iccon" src="../../../../assets/img/green-tick.jpg">
+        </div>
+    </div>
+</div>

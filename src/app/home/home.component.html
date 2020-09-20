@@ -1,0 +1,25 @@
+<div class="user-container">
+    <div class="table">
+        <div class="panel-heading"><span class="lead">User List of ReqRes</span></div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Avatar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usr of user.data">
+                    <td> <span>{{usr.id}}</span></td>
+                    <td><span>{{usr.email}}</span></td>
+                    <td><span>{{usr.first_name}}</span></td>
+                    <td><span>{{usr.last_name}}</span></td>
+                    <td><span><a href="{{usr.avatar}}">{{usr.avatar}}</a></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

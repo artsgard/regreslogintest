@@ -1,0 +1,39 @@
+<div class="formcontainer">
+    <span class="info"> Login Form (hint: eve.holt@reqres.in pistol)</span>
+    <form [formGroup]="authForm" class="form-group" (ngSubmit)="login(authForm.value)">
+        <div class="email-input">
+            <app-input [inputId]="'input-email-id'" [inputLabel]="'email'" [inputType]="'text'" name="inputTextVal"
+                [isDisabled]="'false'" formControlName="email"
+                [hasError]="email.invalid && (email.dirty || email.touched)"></app-input>
+            <div *ngIf="email.invalid && (email.dirty || email.touched) && email" class="error-container">
+                <div *ngIf="email.hasError('required') && email.touched">
+                    Email is required.
+                </div>
+                <div *ngIf="email.hasError('email') && email.touched">
+                    Not a valid email.
+                </div>
+            </div>
+        </div>
+        <div class="password-input">
+            <app-input [inputId]="'input-username-password'" [inputLabel]="'password'" [inputType]="'password'"
+                name="inputPasswordVal" [isDisabled]="'false'" formControlName="password"
+                [hasError]="password.invalid && (password.dirty || password.touched)"></app-input>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-container">
+                <div *ngIf="password.hasError('required') && password.touched">
+                    Password is required.
+                </div>
+                <div *ngIf="password.hasError('minlength') && password.touched">
+                    Password must be at least 4 characters long.
+                </div>
+            </div>
+        </div>
+        <div class="button-panel">
+            <div class="submit-button">
+                <app-button [buttonLabel]="'Login'" [buttonColor]="'green'" [buttonIcon]="'user.svg'"
+                    [hasLeftIcon]="'true'" [isDisabled]="!authForm.valid" [inputType]="'submit'"></app-button>
+            </div>
+        </div>
+    </form>
+    <app-modal [modalTitle]="'Bad Login'" [modalText]="'Oh boy you did not make it! Try again!'" [modalId]="'bad-login'"
+        [isInfoModal]="true"></app-modal>
+</div>
