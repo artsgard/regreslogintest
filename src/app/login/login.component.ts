@@ -25,11 +25,9 @@ export class LoginComponent implements OnInit {
     this.authForm = new FormGroup({
       email: new FormControl('', {
         validators: [Validators.required, Validators.email]
-        //updateOn: 'blur' //not working!
       }),
       password: new FormControl('', {
         validators: [Validators.required, Validators.minLength(4)]
-        //updateOn: 'blur'
       }),
     })
   }
@@ -51,7 +49,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['home']);
       }
     });
-
   }
 }
 
